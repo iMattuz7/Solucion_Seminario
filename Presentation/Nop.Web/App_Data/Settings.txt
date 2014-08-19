@@ -1,0 +1,2 @@
+DataProvider: sqlserver
+DataConnectionString: Data Source=IMATTUZ-WIN;Initial Catalog=dbSlalomIT;Integrated Security=True;Persist Security Info=False;MultipleActiveResultSets=True
