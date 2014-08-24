@@ -1,0 +1,9 @@
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Tests\Nop.Tests\bin\Debug\Nop.Tests.dll
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Tests\Nop.Tests\bin\Debug\Nop.Tests.pdb
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Tests\Nop.Tests\bin\Debug\nunit.framework.dll
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Tests\Nop.Tests\bin\Debug\Rhino.Mocks.dll
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Tests\Nop.Tests\bin\Debug\nunit.framework.xml
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Tests\Nop.Tests\bin\Debug\Rhino.Mocks.xml
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Tests\Nop.Tests\obj\Debug\Nop.Tests.csprojResolveAssemblyReference.cache
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Tests\Nop.Tests\obj\Debug\Nop.Tests.dll
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Tests\Nop.Tests\obj\Debug\Nop.Tests.pdb
