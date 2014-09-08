@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Nop.Core;
@@ -1082,154 +1083,160 @@ namespace Nop.Web.Controllers
         public ActionResult AddProductToCart_Catalog(int productId, int shoppingCartTypeId,
             int quantity, bool forceredirection = false)
         {
-            var cartType = (ShoppingCartType)shoppingCartTypeId;
-
-            var product = _productService.GetProductById(productId);
-            if (product == null)
-                //no product found
-                return Json(new
-                {
-                    success = false,
-                    message = "No product found with the specified ID"
-                });
-
-            //we can add only simple products
-            if (product.ProductType != ProductType.SimpleProduct)
+            
+            return Json(new
             {
-                return Json(new
-                {
-                    redirect = Url.RouteUrl("Product", new { SeName = product.GetSeName() }),
-                });
-            }
+                redirect = Url.RouteUrl("HomePage") 
+            });
+            
+            //var cartType = (ShoppingCartType)shoppingCartTypeId;
 
-            if (product.CustomerEntersPrice)
-            {
-                //cannot be added to the cart (requires a customer to enter price)
-                return Json(new
-                {
-                    redirect = Url.RouteUrl("Product", new { SeName = product.GetSeName() }),
-                });
-            }
+            //var product = _productService.GetProductById(productId);
+            //if (product == null)
+            //    //no product found
+            //    return Json(new
+            //    {
+            //        success = false,
+            //        message = "No product found with the specified ID"
+            //    });
 
-            var allowedQuantities = product.ParseAllowedQuatities();
-            if (allowedQuantities.Length > 0)
-            {
-                //cannot be added to the cart (requires a customer to select a quantity from dropdownlist)
-                return Json(new
-                {
-                    redirect = Url.RouteUrl("Product", new { SeName = product.GetSeName() }),
-                });
-            }
+            ////we can add only simple products
+            //if (product.ProductType != ProductType.SimpleProduct)
+            //{
+            //    return Json(new
+            //    {
+            //        redirect = Url.RouteUrl("Product", new { SeName = product.GetSeName() }),
+            //    });
+            //}
 
-            //get standard warnings without attribute validations
-            //first, try to find existing shopping cart item
-            var cart = _workContext.CurrentCustomer.ShoppingCartItems
-                .Where(sci => sci.ShoppingCartType == cartType)
-                .Where(sci => sci.StoreId == _storeContext.CurrentStore.Id)
-                .ToList();
-            var shoppingCartItem = _shoppingCartService.FindShoppingCartItemInTheCart(cart, cartType, product);
-            //if we already have the same product in the cart, then use the total quantity to validate
-            var quantityToValidate = shoppingCartItem != null ? shoppingCartItem.Quantity + quantity : quantity;
-            var addToCartWarnings = _shoppingCartService
-                .GetShoppingCartItemWarnings(_workContext.CurrentCustomer, cartType,
-                product, _storeContext.CurrentStore.Id, string.Empty, 
-                decimal.Zero, quantityToValidate, false, true, false, false, false);
-            if (addToCartWarnings.Count > 0)
-            {
-                //cannot be added to the cart
-                //let's display standard warnings
-                return Json(new
-                {
-                    success = false,
-                    message = addToCartWarnings.ToArray()
-                });
-            }
+            //if (product.CustomerEntersPrice)
+            //{
+            //    //cannot be added to the cart (requires a customer to enter price)
+            //    return Json(new
+            //    {
+            //        redirect = Url.RouteUrl("Product", new { SeName = product.GetSeName() }),
+            //    });
+            //}
 
-            //now let's try adding product to the cart (now including product attribute validation, etc)
-            addToCartWarnings = _shoppingCartService.AddToCart(_workContext.CurrentCustomer,
-                product, cartType, _storeContext.CurrentStore.Id,
-                string.Empty, decimal.Zero, quantity, true);
-            if (addToCartWarnings.Count > 0)
-            {
-                //cannot be added to the cart
-                //but we do not display attribute and gift card warnings here. let's do it on the product details page
-                return Json(new
-                {
-                    redirect = Url.RouteUrl("Product", new { SeName = product.GetSeName() }),
-                });
-            }
+            //var allowedQuantities = product.ParseAllowedQuatities();
+            //if (allowedQuantities.Length > 0)
+            //{
+            //    //cannot be added to the cart (requires a customer to select a quantity from dropdownlist)
+            //    return Json(new
+            //    {
+            //        redirect = Url.RouteUrl("Product", new { SeName = product.GetSeName() }),
+            //    });
+            //}
 
-            //added to the cart/wishlist
-            switch (cartType)
-            {
-                case ShoppingCartType.Wishlist:
-                    {
-                        //activity log
-                        _customerActivityService.InsertActivity("PublicStore.AddToWishlist", _localizationService.GetResource("ActivityLog.PublicStore.AddToWishlist"), product.Name);
+            ////get standard warnings without attribute validations
+            ////first, try to find existing shopping cart item
+            //var cart = _workContext.CurrentCustomer.ShoppingCartItems
+            //    .Where(sci => sci.ShoppingCartType == cartType)
+            //    .Where(sci => sci.StoreId == _storeContext.CurrentStore.Id)
+            //    .ToList();
+            //var shoppingCartItem = _shoppingCartService.FindShoppingCartItemInTheCart(cart, cartType, product);
+            ////if we already have the same product in the cart, then use the total quantity to validate
+            //var quantityToValidate = shoppingCartItem != null ? shoppingCartItem.Quantity + quantity : quantity;
+            //var addToCartWarnings = _shoppingCartService
+            //    .GetShoppingCartItemWarnings(_workContext.CurrentCustomer, cartType,
+            //    product, _storeContext.CurrentStore.Id, string.Empty, 
+            //    decimal.Zero, quantityToValidate, false, true, false, false, false);
+            //if (addToCartWarnings.Count > 0)
+            //{
+            //    //cannot be added to the cart
+            //    //let's display standard warnings
+            //    return Json(new
+            //    {
+            //        success = false,
+            //        message = addToCartWarnings.ToArray()
+            //    });
+            //}
 
-                        if (_shoppingCartSettings.DisplayWishlistAfterAddingProduct || forceredirection)
-                        {
-                            //redirect to the wishlist page
-                            return Json(new
-                            {
-                                redirect = Url.RouteUrl("Wishlist"),
-                            });
-                        }
-                        else
-                        {
-                            //display notification message and update appropriate blocks
-                            var updatetopwishlistsectionhtml = string.Format(_localizationService.GetResource("Wishlist.HeaderQuantity"),
-                                 _workContext.CurrentCustomer.ShoppingCartItems
-                                 .Where(sci => sci.ShoppingCartType == ShoppingCartType.Wishlist)
-                                 .Where(sci => sci.StoreId == _storeContext.CurrentStore.Id)
-                                 .ToList()
-                                 .GetTotalProducts());
-                            return Json(new
-                            {
-                                success = true,
-                                message = string.Format(_localizationService.GetResource("Products.ProductHasBeenAddedToTheWishlist.Link"), Url.RouteUrl("Wishlist")),
-                                updatetopwishlistsectionhtml = updatetopwishlistsectionhtml,
-                            });
-                        }
-                    }
-                case ShoppingCartType.ShoppingCart:
-                default:
-                    {
-                        //activity log
-                        _customerActivityService.InsertActivity("PublicStore.AddToShoppingCart", _localizationService.GetResource("ActivityLog.PublicStore.AddToShoppingCart"), product.Name);
+            ////now let's try adding product to the cart (now including product attribute validation, etc)
+            //addToCartWarnings = _shoppingCartService.AddToCart(_workContext.CurrentCustomer,
+            //    product, cartType, _storeContext.CurrentStore.Id,
+            //    string.Empty, decimal.Zero, quantity, true);
+            //if (addToCartWarnings.Count > 0)
+            //{
+            //    //cannot be added to the cart
+            //    //but we do not display attribute and gift card warnings here. let's do it on the product details page
+            //    return Json(new
+            //    {
+            //        redirect = Url.RouteUrl("Product", new { SeName = product.GetSeName() }),
+            //    });
+            //}
 
-                        if (_shoppingCartSettings.DisplayCartAfterAddingProduct || forceredirection)
-                        {
-                            //redirect to the shopping cart page
-                            return Json(new
-                            {
-                                redirect = Url.RouteUrl("ShoppingCart"),
-                            });
-                        }
-                        else
-                        {
+            ////added to the cart/wishlist
+            //switch (cartType)
+            //{
+            //    case ShoppingCartType.Wishlist:
+            //        {
+            //            //activity log
+            //            _customerActivityService.InsertActivity("PublicStore.AddToWishlist", _localizationService.GetResource("ActivityLog.PublicStore.AddToWishlist"), product.Name);
 
-                            //display notification message and update appropriate blocks
-                            var updatetopcartsectionhtml = string.Format(_localizationService.GetResource("ShoppingCart.HeaderQuantity"),
-                                 _workContext.CurrentCustomer.ShoppingCartItems
-                                 .Where(sci => sci.ShoppingCartType == ShoppingCartType.ShoppingCart)
-                                 .Where(sci => sci.StoreId == _storeContext.CurrentStore.Id)
-                                 .ToList()
-                                 .GetTotalProducts());
-                            var updateflyoutcartsectionhtml = _shoppingCartSettings.MiniShoppingCartEnabled
-                                ? this.RenderPartialViewToString("FlyoutShoppingCart", PrepareMiniShoppingCartModel())
-                                : "";
+            //            if (_shoppingCartSettings.DisplayWishlistAfterAddingProduct || forceredirection)
+            //            {
+            //                //redirect to the wishlist page
+            //                return Json(new
+            //                {
+            //                    redirect = Url.RouteUrl("Wishlist"),
+            //                });
+            //            }
+            //            else
+            //            {
+            //                //display notification message and update appropriate blocks
+            //                var updatetopwishlistsectionhtml = string.Format(_localizationService.GetResource("Wishlist.HeaderQuantity"),
+            //                     _workContext.CurrentCustomer.ShoppingCartItems
+            //                     .Where(sci => sci.ShoppingCartType == ShoppingCartType.Wishlist)
+            //                     .Where(sci => sci.StoreId == _storeContext.CurrentStore.Id)
+            //                     .ToList()
+            //                     .GetTotalProducts());
+            //                return Json(new
+            //                {
+            //                    success = true,
+            //                    message = string.Format(_localizationService.GetResource("Products.ProductHasBeenAddedToTheWishlist.Link"), Url.RouteUrl("Wishlist")),
+            //                    updatetopwishlistsectionhtml = updatetopwishlistsectionhtml,
+            //                });
+            //            }
+            //        }
+            //    case ShoppingCartType.ShoppingCart:
+            //    default:
+            //        {
+            //            //activity log
+            //            _customerActivityService.InsertActivity("PublicStore.AddToShoppingCart", _localizationService.GetResource("ActivityLog.PublicStore.AddToShoppingCart"), product.Name);
 
-                            return Json(new
-                            {
-                                success = true,
-                                message = string.Format(_localizationService.GetResource("Products.ProductHasBeenAddedToTheCart.Link"), Url.RouteUrl("ShoppingCart")),
-                                updatetopcartsectionhtml = updatetopcartsectionhtml,
-                                updateflyoutcartsectionhtml = updateflyoutcartsectionhtml
-                            });
-                        }
-                    }
-            }
+            //            if (_shoppingCartSettings.DisplayCartAfterAddingProduct || forceredirection)
+            //            {
+            //                //redirect to the shopping cart page
+            //                return Json(new
+            //                {
+            //                    redirect = Url.RouteUrl("ShoppingCart"),
+            //                });
+            //            }
+            //            else
+            //            {
+
+            //                //display notification message and update appropriate blocks
+            //                var updatetopcartsectionhtml = string.Format(_localizationService.GetResource("ShoppingCart.HeaderQuantity"),
+            //                     _workContext.CurrentCustomer.ShoppingCartItems
+            //                     .Where(sci => sci.ShoppingCartType == ShoppingCartType.ShoppingCart)
+            //                     .Where(sci => sci.StoreId == _storeContext.CurrentStore.Id)
+            //                     .ToList()
+            //                     .GetTotalProducts());
+            //                var updateflyoutcartsectionhtml = _shoppingCartSettings.MiniShoppingCartEnabled
+            //                    ? this.RenderPartialViewToString("FlyoutShoppingCart", PrepareMiniShoppingCartModel())
+            //                    : "";
+
+            //                return Json(new
+            //                {
+            //                    success = true,
+            //                    message = string.Format(_localizationService.GetResource("Products.ProductHasBeenAddedToTheCart.Link"), Url.RouteUrl("ShoppingCart")),
+            //                    updatetopcartsectionhtml = updatetopcartsectionhtml,
+            //                    updateflyoutcartsectionhtml = updateflyoutcartsectionhtml
+            //                });
+            //            }
+            //        }
+            //}
         }
 
         //add product to cart using AJAX
