@@ -1220,18 +1220,18 @@ namespace Nop.Web.Controllers
 
 
             //price ranges
-            model.PagingFilteringContext.PriceRangeFilter.LoadPriceRangeFilters(category.PriceRanges, _webHelper, _priceFormatter);
-            var selectedPriceRange = model.PagingFilteringContext.PriceRangeFilter.GetSelectedPriceRange(_webHelper, category.PriceRanges);
-            decimal? minPriceConverted = null;
-            decimal? maxPriceConverted = null;
-            if (selectedPriceRange != null)
-            {
-                if (selectedPriceRange.From.HasValue)
-                    minPriceConverted = _currencyService.ConvertToPrimaryStoreCurrency(selectedPriceRange.From.Value, _workContext.WorkingCurrency);
+            //model.PagingFilteringContext.PriceRangeFilter.LoadPriceRangeFilters(category.PriceRanges, _webHelper, _priceFormatter);
+            //var selectedPriceRange = model.PagingFilteringContext.PriceRangeFilter.GetSelectedPriceRange(_webHelper, category.PriceRanges);
+            //decimal? minPriceConverted = null;
+            //decimal? maxPriceConverted = null;
+            //if (selectedPriceRange != null)
+            //{
+            //    if (selectedPriceRange.From.HasValue)
+            //        minPriceConverted = _currencyService.ConvertToPrimaryStoreCurrency(selectedPriceRange.From.Value, _workContext.WorkingCurrency);
 
-                if (selectedPriceRange.To.HasValue)
-                    maxPriceConverted = _currencyService.ConvertToPrimaryStoreCurrency(selectedPriceRange.To.Value, _workContext.WorkingCurrency);
-            }
+            //    if (selectedPriceRange.To.HasValue)
+            //        maxPriceConverted = _currencyService.ConvertToPrimaryStoreCurrency(selectedPriceRange.To.Value, _workContext.WorkingCurrency);
+            //}
 
 
 
@@ -1359,7 +1359,7 @@ namespace Nop.Web.Controllers
                 storeId: _storeContext.CurrentStore.Id,
                 visibleIndividuallyOnly: true,
                 featuredProducts:_catalogSettings.IncludeFeaturedProductsInNormalLists ? null : (bool?)false,
-                priceMin:minPriceConverted, priceMax:maxPriceConverted,
+                //priceMin:minPriceConverted, priceMax:maxPriceConverted,
                 filteredSpecs: alreadyFilteredSpecOptionIds,
                 orderBy: (ProductSortingEnum)command.OrderBy,
                 pageIndex: command.PageNumber - 1,
@@ -1637,18 +1637,18 @@ namespace Nop.Web.Controllers
 
 
             //price ranges
-            model.PagingFilteringContext.PriceRangeFilter.LoadPriceRangeFilters(manufacturer.PriceRanges, _webHelper, _priceFormatter);
-            var selectedPriceRange = model.PagingFilteringContext.PriceRangeFilter.GetSelectedPriceRange(_webHelper, manufacturer.PriceRanges);
-            decimal? minPriceConverted = null;
-            decimal? maxPriceConverted = null;
-            if (selectedPriceRange != null)
-            {
-                if (selectedPriceRange.From.HasValue)
-                    minPriceConverted = _currencyService.ConvertToPrimaryStoreCurrency(selectedPriceRange.From.Value, _workContext.WorkingCurrency);
+            //model.PagingFilteringContext.PriceRangeFilter.LoadPriceRangeFilters(manufacturer.PriceRanges, _webHelper, _priceFormatter);
+            //var selectedPriceRange = model.PagingFilteringContext.PriceRangeFilter.GetSelectedPriceRange(_webHelper, manufacturer.PriceRanges);
+            //decimal? minPriceConverted = null;
+            //decimal? maxPriceConverted = null;
+            //if (selectedPriceRange != null)
+            //{
+            //    if (selectedPriceRange.From.HasValue)
+            //        minPriceConverted = _currencyService.ConvertToPrimaryStoreCurrency(selectedPriceRange.From.Value, _workContext.WorkingCurrency);
 
-                if (selectedPriceRange.To.HasValue)
-                    maxPriceConverted = _currencyService.ConvertToPrimaryStoreCurrency(selectedPriceRange.To.Value, _workContext.WorkingCurrency);
-            }
+            //    if (selectedPriceRange.To.HasValue)
+            //        maxPriceConverted = _currencyService.ConvertToPrimaryStoreCurrency(selectedPriceRange.To.Value, _workContext.WorkingCurrency);
+            //}
 
 
 
@@ -1696,8 +1696,8 @@ namespace Nop.Web.Controllers
                 storeId: _storeContext.CurrentStore.Id,
                 visibleIndividuallyOnly: true,
                 featuredProducts: _catalogSettings.IncludeFeaturedProductsInNormalLists ? null : (bool?)false,
-                priceMin: minPriceConverted, 
-                priceMax: maxPriceConverted,
+                //priceMin: minPriceConverted, 
+                //priceMax: maxPriceConverted,
                 orderBy: (ProductSortingEnum)command.OrderBy,
                 pageIndex: command.PageNumber - 1,
                 pageSize: command.PageSize);
@@ -2922,6 +2922,10 @@ namespace Nop.Web.Controllers
         [NopHttpsRequirement(SslRequirement.No)]
         public ActionResult ProductEmailAFriend(int productId)
         {
+
+            //Por el momento redirecciona al homePage
+            return RedirectToRoute("HomePage");
+
             var product = _productService.GetProductById(productId);
             if (product == null || product.Deleted || !product.Published || !_catalogSettings.EmailAFriendEnabled)
                 return RedirectToRoute("HomePage");

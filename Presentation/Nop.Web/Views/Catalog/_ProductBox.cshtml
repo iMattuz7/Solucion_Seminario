@@ -28,7 +28,9 @@
         <h2 class="product-title">
             <a href="@Url.RouteUrl("Product", new { SeName = Model.SeName })">@Model.Name</a>
         </h2>
-        @if (Model.ReviewOverviewModel.AllowCustomerReviews)
+        
+        @*Eliminamos la funcionalidad de review en el box *@ 
+        @* @if (Model.ReviewOverviewModel.AllowCustomerReviews)
         {
             int ratingPercent = 0;
             if (Model.ReviewOverviewModel.TotalReviews != 0)
@@ -41,7 +43,7 @@
                     </div>
                 </div>
             </div>
-        }
+        }*@
         <div class="description">
             @Html.Raw(Model.ShortDescription)
         </div>

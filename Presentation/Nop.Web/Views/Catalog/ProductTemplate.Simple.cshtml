@@ -50,7 +50,7 @@
                         <!--product manufacturers-->
                         @Html.Action("ProductManufacturers", "Catalog", new { productId = Model.Id })
                         <!--product reviews-->
-                        @Html.Action("ProductReviewOverview", "Catalog", new { productId = Model.Id })
+                        @*@Html.Action("ProductReviewOverview", "Catalog", new { productId = Model.Id })*@
                         <!--sample download-->
                         @Html.Partial("_DownloadSample", Model)
                         <!--attributes-->
@@ -71,9 +71,9 @@
                             dataDictPrice.TemplateInfo.HtmlFieldPrefix = string.Format("price_{0}", Model.Id);
                             @Html.Partial("_ProductPrice", Model.ProductPrice, dataDictPrice)
                             
-                            var dataDictAddToCart = new ViewDataDictionary();
+                            @*var dataDictAddToCart = new ViewDataDictionary();
                             dataDictAddToCart.TemplateInfo.HtmlFieldPrefix = string.Format("addtocart_{0}", Model.Id);
-                            @Html.Partial("_AddToCart", Model.AddToCart, dataDictAddToCart)                    
+                            @Html.Partial("_AddToCart", Model.AddToCart, dataDictAddToCart)*@                    
                         }
                         @Html.Action("ProductEmailAFriendButton", "Catalog", new { productId = Model.Id })
                         @Html.Action("CompareProductsButton", "Catalog", new { productId = Model.Id })
