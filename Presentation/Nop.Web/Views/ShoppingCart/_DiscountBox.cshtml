@@ -1,4 +1,4 @@
-﻿@model ShoppingCartModel.DiscountBoxModel
+﻿@*@model ShoppingCartModel.DiscountBoxModel
 @using Nop.Web.Models.ShoppingCart;
 @if (Model.Display)
 {
@@ -23,9 +23,9 @@
         {
             <div class="current-code">
                 @string.Format(T("ShoppingCart.DiscountCouponCode.CurrentCode").Text, Model.CurrentCode)
-                @*empty value (little hack for FormValueExistsAttribute)*@
+                @*empty value (little hack for FormValueExistsAttribute)
                 <input type="submit" name="removediscountcouponcode" value=" " title="@T("Common.Remove")" class="remove-discount-button" />
             </div>
         }
     </div>
-}
+}*@

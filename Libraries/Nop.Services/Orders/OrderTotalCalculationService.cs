@@ -577,36 +577,44 @@ namespace Nop.Services.Orders
                 Address shippingAddress = null;
                 if (customer != null)
                     shippingAddress = customer.ShippingAddress;
-
-                var shippingRateComputationMethods = _shippingService.LoadActiveShippingRateComputationMethods(_storeContext.CurrentStore.Id);
-                if (shippingRateComputationMethods == null || shippingRateComputationMethods.Count == 0)
-                    throw new NopException("Shipping rate computation method could not be loaded");
-
-                if (shippingRateComputationMethods.Count == 1)
+                try
                 {
-                    var shippingRateComputationMethod = shippingRateComputationMethods[0];
+                    var shippingRateComputationMethods = _shippingService.LoadActiveShippingRateComputationMethods(_storeContext.CurrentStore.Id);
+                    if (shippingRateComputationMethods == null || shippingRateComputationMethods.Count == 0)
+                        throw new NopException("Shipping rate computation method could not be loaded");
 
-                    var shippingOptionRequests = _shippingService.CreateShippingOptionRequests(cart, shippingAddress);
-                    decimal? fixedRate = null;
-                    foreach (var shippingOptionRequest in shippingOptionRequests)
+                    if (shippingRateComputationMethods.Count == 1)
                     {
-                        //calculate fixed rates for each request-package
-                        var fixedRateTmp = shippingRateComputationMethod.GetFixedRate(shippingOptionRequest);
-                        if (fixedRateTmp.HasValue)
-                        {
-                            if (!fixedRate.HasValue)
-                                fixedRate = decimal.Zero;
+                        var shippingRateComputationMethod = shippingRateComputationMethods[0];
 
-                            fixedRate += fixedRateTmp.Value;
+                        var shippingOptionRequests = _shippingService.CreateShippingOptionRequests(cart, shippingAddress);
+                        decimal? fixedRate = null;
+                        foreach (var shippingOptionRequest in shippingOptionRequests)
+                        {
+                            //calculate fixed rates for each request-package
+                            var fixedRateTmp = shippingRateComputationMethod.GetFixedRate(shippingOptionRequest);
+                            if (fixedRateTmp.HasValue)
+                            {
+                                if (!fixedRate.HasValue)
+                                    fixedRate = decimal.Zero;
+
+                                fixedRate += fixedRateTmp.Value;
+                            }
+                        }
+
+                        if (fixedRate.HasValue)
+                        {
+                            //adjust shipping rate
+                            shippingTotal = AdjustShippingRate(fixedRate.Value, cart, out appliedDiscount);
                         }
                     }
-                    
-                    if (fixedRate.HasValue)
-                    {
-                        //adjust shipping rate
-                        shippingTotal = AdjustShippingRate(fixedRate.Value, cart, out appliedDiscount);
-                    }
                 }
+                catch (Exception)
+                {
+                    
+                    
+                }
+               
             }
 
             if (shippingTotal.HasValue)

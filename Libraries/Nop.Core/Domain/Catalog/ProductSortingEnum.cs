@@ -12,11 +12,11 @@
         /// <summary>
         /// Name: A to Z
         /// </summary>
-        NameAsc = 5,
+        //NameAsc = 5,
         /// <summary>
         /// Name: Z to A
         /// </summary>
-        NameDesc = 6,
+        //NameDesc = 6,
         /// <summary>
         /// Price: Low to High
         /// </summary>
@@ -28,6 +28,6 @@
         /// <summary>
         /// Product creation date
         /// </summary>
-        CreatedOn = 15,
+        //CreatedOn = 15,
     }
 }

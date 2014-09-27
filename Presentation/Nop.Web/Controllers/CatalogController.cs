@@ -1544,28 +1544,28 @@ namespace Nop.Web.Controllers
 
 
             //view mode
-            model.PagingFilteringContext.AllowProductViewModeChanging = _catalogSettings.AllowProductViewModeChanging;
-            var viewMode = !string.IsNullOrEmpty(command.ViewMode)
-                ? command.ViewMode
-                : _catalogSettings.DefaultViewMode;
-            if (model.PagingFilteringContext.AllowProductViewModeChanging)
-            {
-                var currentPageUrl = _webHelper.GetThisPageUrl(true);
-                //grid
-                model.PagingFilteringContext.AvailableViewModes.Add(new SelectListItem()
-                {
-                    Text = _localizationService.GetResource("Manufacturers.ViewMode.Grid"),
-                    Value = _webHelper.ModifyQueryString(currentPageUrl, "viewmode=grid", null),
-                    Selected = viewMode == "grid"
-                });
-                //list
-                model.PagingFilteringContext.AvailableViewModes.Add(new SelectListItem()
-                {
-                    Text = _localizationService.GetResource("Manufacturers.ViewMode.List"),
-                    Value = _webHelper.ModifyQueryString(currentPageUrl, "viewmode=list", null),
-                    Selected = viewMode == "list"
-                });
-            }
+            //model.PagingFilteringContext.AllowProductViewModeChanging = _catalogSettings.AllowProductViewModeChanging;
+            //var viewMode = !string.IsNullOrEmpty(command.ViewMode)
+            //    ? command.ViewMode
+            //    : _catalogSettings.DefaultViewMode;
+            //if (model.PagingFilteringContext.AllowProductViewModeChanging)
+            //{
+            //    var currentPageUrl = _webHelper.GetThisPageUrl(true);
+            //    //grid
+            //    model.PagingFilteringContext.AvailableViewModes.Add(new SelectListItem()
+            //    {
+            //        Text = _localizationService.GetResource("Manufacturers.ViewMode.Grid"),
+            //        Value = _webHelper.ModifyQueryString(currentPageUrl, "viewmode=grid", null),
+            //        Selected = viewMode == "grid"
+            //    });
+            //    //list
+            //    model.PagingFilteringContext.AvailableViewModes.Add(new SelectListItem()
+            //    {
+            //        Text = _localizationService.GetResource("Manufacturers.ViewMode.List"),
+            //        Value = _webHelper.ModifyQueryString(currentPageUrl, "viewmode=list", null),
+            //        Selected = viewMode == "list"
+            //    });
+            //}
                         
             //page size
             model.PagingFilteringContext.AllowCustomersToSelectPageSize = false;
@@ -1704,7 +1704,7 @@ namespace Nop.Web.Controllers
             model.Products = PrepareProductOverviewModels(products).ToList();
 
             model.PagingFilteringContext.LoadPagedList(products);
-            model.PagingFilteringContext.ViewMode = viewMode;
+            //model.PagingFilteringContext.ViewMode = viewMode;
 
 
             //template
@@ -2344,11 +2344,11 @@ namespace Nop.Web.Controllers
                 var products = _productService.SearchProducts(
                     storeId: _storeContext.CurrentStore.Id,
                        visibleIndividuallyOnly: true,
-                    orderBy:ProductSortingEnum.CreatedOn,
+                    orderBy:ProductSortingEnum.Position,
                     pageSize:_catalogSettings.RecentlyAddedProductsNumber);
                 model.AddRange(PrepareProductOverviewModels(products));
             }
-            return View(model);
+            return View(model);//,
         }
 
         public ActionResult RecentlyAddedProductsRss()
@@ -2368,7 +2368,7 @@ namespace Nop.Web.Controllers
             var products = _productService.SearchProducts(
                 storeId: _storeContext.CurrentStore.Id,
                 visibleIndividuallyOnly: true,
-                orderBy: ProductSortingEnum.CreatedOn,
+                orderBy: ProductSortingEnum.Position,
                 pageSize: _catalogSettings.RecentlyAddedProductsNumber);
             foreach (var product in products)
             {

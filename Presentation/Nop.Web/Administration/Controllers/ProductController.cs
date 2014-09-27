@@ -1916,6 +1916,35 @@ namespace Nop.Admin.Controllers
 
         #region Product pictures
 
+        public ActionResult ProductPictureZoomAdd(int pictureId, int displayOrder, int productId)
+        {
+            if (!_permissionService.Authorize(StandardPermissionProvider.ManageProducts))
+                return AccessDeniedView();
+
+            if (pictureId == 0)
+                throw new ArgumentException();
+
+            var product = _productService.GetProductById(productId);
+            if (product == null)
+                throw new ArgumentException("No product found with the specified id");
+
+            //a vendor should have access only to his products
+            if (_workContext.CurrentVendor != null && product.VendorId != _workContext.CurrentVendor.Id)
+                return RedirectToAction("List");
+
+            _productService.InsertProductPicture(new ProductPicture()
+            {
+                PictureId = pictureId,
+                ProductId = productId,
+                DisplayOrder = displayOrder,
+            });
+
+            _pictureService.SetSeoFilename(pictureId, _pictureService.GetPictureSeName(product.Name));
+
+            return Json(new { Result = true }, JsonRequestBehavior.AllowGet);
+        }
+
+
         public ActionResult ProductPictureAdd(int pictureId, int displayOrder, int productId)
         {
             if (!_permissionService.Authorize(StandardPermissionProvider.ManageProducts))

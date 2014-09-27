@@ -19,3 +19,4 @@ C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Core\bin
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Core\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Core\obj\Debug\Nop.Core.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Core\obj\Debug\Nop.Core.pdb
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Core\obj\Debug\Nop.Core.csprojResolveAssemblyReference.cache

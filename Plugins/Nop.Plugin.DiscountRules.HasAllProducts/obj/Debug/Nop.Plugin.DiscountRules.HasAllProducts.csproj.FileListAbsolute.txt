@@ -2,6 +2,5 @@ C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\P
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\DiscountRules.HasAllProducts\logo.jpg
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\DiscountRules.HasAllProducts\Nop.Plugin.DiscountRules.HasAllProducts.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\DiscountRules.HasAllProducts\Nop.Plugin.DiscountRules.HasAllProducts.pdb
-C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.DiscountRules.HasAllProducts\obj\Debug\Nop.Plugin.DiscountRules.HasAllProducts.csprojResolveAssemblyReference.cache
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.DiscountRules.HasAllProducts\obj\Debug\Nop.Plugin.DiscountRules.HasAllProducts.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.DiscountRules.HasAllProducts\obj\Debug\Nop.Plugin.DiscountRules.HasAllProducts.pdb

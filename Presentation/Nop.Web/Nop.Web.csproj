@@ -450,6 +450,7 @@
     <Content Include="Content\Images\Logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Images\zoompicture\seba-fr1-zoom.jpg" />
     <Content Include="Content\kendo\2014.1.318\Black\editor.png" />
     <Content Include="Content\kendo\2014.1.318\Black\imagebrowser.png" />
     <Content Include="Content\kendo\2014.1.318\Black\indeterminate.gif" />
@@ -757,6 +758,8 @@
     <Content Include="Scripts\jquery-migrate-1.2.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.10.3.custom.js" />
     <Content Include="Scripts\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="Scripts\Zoomm\jquery.elevatezoom.min.js" />
+    <Content Include="Scripts\Zoomm\jquery.fancybox.pack.js" />
     <Content Include="Scripts\jquery.magnific-popup.js" />
     <Content Include="Scripts\jquery.mobile-1.3.2.js" />
     <Content Include="Scripts\jquery.mobile-1.3.2.min.js" />

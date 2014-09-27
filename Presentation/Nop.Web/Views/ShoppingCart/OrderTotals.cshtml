@@ -11,7 +11,7 @@
                     <span class="nobr"><span class="product-price">@Model.SubTotal</span> </span>
                 </td>
             </tr>
-            @if (!String.IsNullOrEmpty(Model.SubTotalDiscount))
+           @* @if (!String.IsNullOrEmpty(Model.SubTotalDiscount))
             {
                 <tr>
                     <td class="cart-total-left">
@@ -28,8 +28,8 @@
                         <span class="nobr"><span class="product-price">@Model.SubTotalDiscount</span> </span>
                     </td>
                 </tr>
-            }
-            <tr>
+            }*@
+           @* <tr>
                 <td class="cart-total-left">
                     <span class="nobr">
                         @T("ShoppingCart.Totals.Shipping"):</span>
@@ -60,8 +60,8 @@
                         }
                     </span>
                 </td>
-            </tr>
-            @if (!String.IsNullOrEmpty(Model.PaymentMethodAdditionalFee))
+            </tr>*@
+            @*@if (!String.IsNullOrEmpty(Model.PaymentMethodAdditionalFee))
             {
                 <tr>
                     <td class="cart-total-left">
@@ -161,7 +161,7 @@
                         </span>
                     </td>
                 </tr>
-            }
+            }*@
             <tr>
                 <td class="cart-total-left">
                     <span class="nobr">

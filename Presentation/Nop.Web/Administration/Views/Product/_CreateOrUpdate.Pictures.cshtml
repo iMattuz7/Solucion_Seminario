@@ -122,6 +122,36 @@
                 });
             });
         });
+
+        //Agregando zoom picture jquery method
+        $(document).ready(function () {
+            $('#addProductPictureZoom').click(function () {
+                var pictureId = $("#@Html.FieldIdFor(model => model.AddPictureModel.PictureId)").val();
+                var displayOrder = $("#@Html.FieldIdFor(model => model.AddPictureModel.DisplayOrder)").val();
+                
+                if (pictureId == 0) {
+                    alert('Upload picture first');
+                    return;
+                }
+
+                $('#addProductPictureZoom').attr('disabled', true);
+                $.ajax({
+                    cache:false,
+                    type: "POST",
+                    url: "@(Url.Action("ProductPictureAdd", "Product"))",
+                    data: { "pictureId": pictureId, "displayOrder": displayOrder, "productId": @Model.Id },
+                    success: function (data) {
+                        var productpicturesGrid = $("#productpictures-grid");
+                        productpicturesGrid.data('kendoGrid').dataSource.read();
+                        $('#addProductPicture').attr('disabled', false);
+                    },
+                    error:function (xhr, ajaxOptions, thrownError){
+                        alert('Failed to add product picture.');
+                        $('#addProductPicture').attr('disabled', false);
+                    }  
+                });
+            });
+        });
     </script>        
     <table class="adminContent">
         <tr>
@@ -145,6 +175,7 @@
         <tr>
             <td colspan="2" align="left">
                 <input type="button" id="addProductPicture" class="k-button" value="@T("Admin.Catalog.Products.Pictures.AddButton")" />
+                <input type="button" id="addProductPictureZoom" class="k-button" value="Add Zoom Picture" />
             </td>
         </tr>
     </table>

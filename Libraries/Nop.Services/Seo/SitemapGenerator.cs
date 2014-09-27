@@ -92,8 +92,8 @@ namespace Nop.Services.Seo
         {
             var products = _productService.SearchProducts(
                 storeId: _storeContext.CurrentStore.Id,
-                visibleIndividuallyOnly: true,
-                orderBy: ProductSortingEnum.CreatedOn);
+                visibleIndividuallyOnly: true
+               ); //orderBy: ProductSortingEnum.CreatedOn
             foreach (var product in products)
             {
                 var url = urlHelper.RouteUrl("Product", new { SeName = product.GetSeName() }, "http");

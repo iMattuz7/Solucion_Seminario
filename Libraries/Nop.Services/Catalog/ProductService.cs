@@ -847,16 +847,16 @@ namespace Nop.Services.Catalog
                     //otherwise sort by name
                     query = query.OrderBy(p => p.Name);
                 }
-                else if (orderBy == ProductSortingEnum.NameAsc)
-                {
-                    //Name: A to Z
-                    query = query.OrderBy(p => p.Name);
-                }
-                else if (orderBy == ProductSortingEnum.NameDesc)
-                {
-                    //Name: Z to A
-                    query = query.OrderByDescending(p => p.Name);
-                }
+                //else if (orderBy == ProductSortingEnum.NameAsc)
+                //{
+                //    //Name: A to Z
+                //    query = query.OrderBy(p => p.Name);
+                //}
+                //else if (orderBy == ProductSortingEnum.NameDesc)
+                //{
+                //    //Name: Z to A
+                //    query = query.OrderByDescending(p => p.Name);
+                //}
                 else if (orderBy == ProductSortingEnum.PriceAsc)
                 {
                     //Price: Low to High
@@ -867,11 +867,11 @@ namespace Nop.Services.Catalog
                     //Price: High to Low
                     query = query.OrderByDescending(p => p.Price);
                 }
-                else if (orderBy == ProductSortingEnum.CreatedOn)
-                {
-                    //creation date
-                    query = query.OrderByDescending(p => p.CreatedOnUtc);
-                }
+                //else if (orderBy == ProductSortingEnum.CreatedOn)
+                //{
+                //    //creation date
+                //    query = query.OrderByDescending(p => p.CreatedOnUtc);
+                //}
                 else
                 {
                     //actually this code is not reachable
@@ -1459,6 +1459,21 @@ namespace Nop.Services.Catalog
         /// </summary>
         /// <param name="productPicture">Product picture</param>
         public virtual void InsertProductPicture(ProductPicture productPicture)
+        {
+            if (productPicture == null)
+                throw new ArgumentNullException("productPicture");
+
+            _productPictureRepository.Insert(productPicture);
+
+            //event notification
+            _eventPublisher.EntityInserted(productPicture);
+        }
+
+        /// <summary>
+        /// Inserts a product picture
+        /// </summary>
+        /// <param name="productPicture">Product picture</param>
+        public virtual void InsertProductPictureZoom(ProductPicture productPicture)
         {
             if (productPicture == null)
                 throw new ArgumentNullException("productPicture");
