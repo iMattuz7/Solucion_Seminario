@@ -1857,6 +1857,9 @@ namespace Nop.Web.Controllers
         [FormValueRequired("checkout")]
         public ActionResult StartCheckout(FormCollection form)
         {
+
+            //return RedirectToRoute("HomePage");
+            
             var cart = _workContext.CurrentCustomer.ShoppingCartItems
                 .Where(sci => sci.ShoppingCartType == ShoppingCartType.ShoppingCart)
                 .Where(sci => sci.StoreId == _storeContext.CurrentStore.Id)
@@ -1866,15 +1869,15 @@ namespace Nop.Web.Controllers
             ParseAndSaveCheckoutAttributes(cart, form);
 
             //validate attributes
-            string checkoutAttributes = _workContext.CurrentCustomer.GetAttribute<string>(SystemCustomerAttributeNames.CheckoutAttributes, _genericAttributeService, _storeContext.CurrentStore.Id);
-            var checkoutAttributeWarnings = _shoppingCartService.GetShoppingCartWarnings(cart, checkoutAttributes, true);
-            if (checkoutAttributeWarnings.Count > 0)
-            {
-                //something wrong, redisplay the page with warnings
-                var model = new ShoppingCartModel();
-                PrepareShoppingCartModel(model, cart, validateCheckoutAttributes: true);
-                return View(model);
-            }
+            //string checkoutAttributes = _workContext.CurrentCustomer.GetAttribute<string>(SystemCustomerAttributeNames.CheckoutAttributes, _genericAttributeService, _storeContext.CurrentStore.Id);
+            //var checkoutAttributeWarnings = _shoppingCartService.GetShoppingCartWarnings(cart, checkoutAttributes, true);
+            //if (checkoutAttributeWarnings.Count > 0)
+            //{
+            //    //something wrong, redisplay the page with warnings
+            //    var model = new ShoppingCartModel();
+            //    PrepareShoppingCartModel(model, cart, validateCheckoutAttributes: true);
+            //    return View(model);
+            //}
 
             //everything is OK
             if (_workContext.CurrentCustomer.IsGuest())
@@ -1892,6 +1895,7 @@ namespace Nop.Web.Controllers
             {
                 return RedirectToRoute("Checkout");
             }
+             
         }
 
         [ValidateInput(false)]

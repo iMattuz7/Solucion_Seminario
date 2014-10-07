@@ -469,8 +469,7 @@ namespace Nop.Web.Controllers
             }
 
             if (UseOnePageCheckout())
-                //return RedirectToRoute("CheckoutOnePage");
-                return RedirectToRoute("HomePage");
+                return RedirectToRoute("CheckoutOnePage");
             else
                 return RedirectToRoute("CheckoutBillingAddress");
         }
