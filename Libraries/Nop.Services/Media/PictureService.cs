@@ -5,6 +5,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Text;
 using ImageResizer;
 using Nop.Core;
 using Nop.Core.Data;
@@ -14,6 +15,8 @@ using Nop.Services.Configuration;
 using Nop.Services.Events;
 using Nop.Services.Logging;
 using Nop.Services.Seo;
+//Trucho
+using System.Data.SqlClient;
 
 namespace Nop.Services.Media
 {
@@ -618,18 +621,47 @@ namespace Nop.Services.Media
             if (productId == 0)
                 return new List<Picture>();
 
-            
-            var query = from p in _pictureRepository.Table
-                        join pp in _productPictureRepository.Table on p.Id equals pp.PictureId
-                        orderby pp.DisplayOrder
-                        where pp.ProductId == productId
-                        select p;
 
+            var query = from p in _pictureRepository.Table
+                join pp in _productPictureRepository.Table on p.Id equals pp.PictureId
+                orderby pp.DisplayOrder
+                where pp.ProductId == productId
+                select p;
+            
+            
             if (recordsToReturn > 0)
                 query = query.Take(recordsToReturn);
 
             var pics = query.ToList();
+
+            
+
             return pics;
+        }
+
+        public virtual string GetZoomURL(int productId)
+        {
+            //hago un sql client para traer la ur
+            var zoomURL = "";
+            SqlConnection con =
+                new SqlConnection("Data Source=IMATTUZ-WIN;Initial Catalog=dbSlalomIT;Integrated Security=True");
+            StringBuilder sqlQuery = new StringBuilder();
+            sqlQuery.Append("SELECT [ZoomPictureURL] FROM [dbSlalomIT].[dbo].[PictureZoom2] ");
+            sqlQuery.AppendFormat("where PictureID = {0}", productId);
+            var cmdSql = new SqlCommand(sqlQuery.ToString(), con);
+            cmdSql.Connection.Open();
+            SqlDataReader reader = cmdSql.ExecuteReader();
+            while (reader.Read())
+            {
+                zoomURL = reader[0].ToString();
+
+            }
+            reader.Close();
+            cmdSql.Connection.Close();
+            cmdSql.Connection.Dispose();
+
+
+            return zoomURL;
         }
 
         /// <summary>

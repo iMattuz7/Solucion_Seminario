@@ -697,6 +697,7 @@ namespace Nop.Web.Controllers
             var cachedPictures = _cacheManager.Get(productPicturesCacheKey, () =>
             {
                 var pictures = _pictureService.GetPicturesByProductId(product.Id);
+                var paramUrlZoom = _pictureService.GetZoomURL(product.Id);
 
                 var defaultPictureModel = new PictureModel()
                 {
@@ -704,6 +705,8 @@ namespace Nop.Web.Controllers
                     FullSizeImageUrl = _pictureService.GetPictureUrl(pictures.FirstOrDefault(), 0, !isAssociatedProduct),
                     Title = string.Format(_localizationService.GetResource("Media.Product.ImageLinkTitleFormat.Details"), model.Name),
                     AlternateText = string.Format(_localizationService.GetResource("Media.Product.ImageAlternateTextFormat.Details"), model.Name),
+                    UrlZoom =  paramUrlZoom
+                    
                 };
                 //all pictures
                 var pictureModels = new List<PictureModel>();
@@ -715,6 +718,7 @@ namespace Nop.Web.Controllers
                         FullSizeImageUrl = _pictureService.GetPictureUrl(picture),
                         Title = string.Format(_localizationService.GetResource("Media.Product.ImageLinkTitleFormat.Details"), model.Name),
                         AlternateText = string.Format(_localizationService.GetResource("Media.Product.ImageAlternateTextFormat.Details"), model.Name),
+                        UrlZoom = paramUrlZoom
                     });
                 }
 

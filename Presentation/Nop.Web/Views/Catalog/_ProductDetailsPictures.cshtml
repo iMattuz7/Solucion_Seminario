@@ -15,7 +15,7 @@
         @if (Model.DefaultPictureZoomEnabled)
         {
             <a href="@Model.DefaultPictureModel.FullSizeImageUrl" title="@Model.Name" id="main-product-img-lightbox-anchor-@Model.Id">
-                <img alt="@Model.DefaultPictureModel.AlternateText" src="@Model.DefaultPictureModel.ImageUrl" title="@Model.DefaultPictureModel.Title" itemprop="image" data-zoom-image="../../Content/Images/zoompicture/seba-fr1-zoom.jpg" id="main-product-img-@Model.Id" />
+                <img alt="@Model.DefaultPictureModel.AlternateText" src="@Model.DefaultPictureModel.ImageUrl" title="@Model.DefaultPictureModel.Title" itemprop="image" data-zoom-image="@Model.DefaultPictureModel.UrlZoom" id="main-product-img-@Model.Id" />
             </a>
             
             <script type="text/javascript">

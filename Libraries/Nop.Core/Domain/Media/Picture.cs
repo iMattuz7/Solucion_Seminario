@@ -29,6 +29,8 @@ namespace Nop.Core.Domain.Media
         /// </summary>
         public bool IsNew { get; set; }
 
+        //public string ZoomUrl { get; set; }
+
         /// <summary>
         /// Gets or sets the product pictures
         /// </summary>

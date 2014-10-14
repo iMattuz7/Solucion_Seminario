@@ -450,7 +450,28 @@
     <Content Include="Content\Images\Logo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\Images\zoompicture\BARBED_ZOOM.png" />
+    <Content Include="Content\Images\zoompicture\FLEXSTRP_ZOOM.jpg" />
+    <Content Include="Content\Images\zoompicture\FLITE_ZOOM.jpg" />
+    <Content Include="Content\Images\zoompicture\FR2_ZOOM.jpg" />
+    <Content Include="Content\Images\zoompicture\HANDFOOT_ZOOM.jpg" />
+    <Content Include="Content\Images\zoompicture\HARDCOREEVO_ZOOM.jpg" />
+    <Content Include="Content\Images\zoompicture\HIGHT_ZOOM.jpg" />
+    <Content Include="Content\Images\zoompicture\IGOR_ZOOM.jpg" />
+    <Content Include="Content\Images\zoompicture\IMPERIAL_ZOOM.jpg" />
+    <Content Include="Content\Images\zoompicture\JERRY_ZOOM.jpg" />
+    <Content Include="Content\Images\zoompicture\KATANA_ZOOM.png" />
+    <Content Include="Content\Images\zoompicture\MINDSOLUTION_ZOOM.jpg" />
+    <Content Include="Content\Images\zoompicture\palm_zoom.jpg" />
+    <Content Include="Content\Images\zoompicture\PHUSION_ZOOM.jpg" />
+    <Content Include="Content\Images\zoompicture\roarstar_zoom.jpg" />
+    <Content Include="Content\Images\zoompicture\S4_ZOOM.jpg" />
+    <Content Include="Content\Images\zoompicture\SEBA 1.jpg" />
     <Content Include="Content\Images\zoompicture\seba-fr1-zoom.jpg" />
+    <Content Include="Content\Images\zoompicture\SHARK_zOOM.jpg" />
+    <Content Include="Content\Images\zoompicture\SPEEDCOBRA_ZOOM.jpg" />
+    <Content Include="Content\Images\zoompicture\TRIX_ZOOM.jpg" />
+    <Content Include="Content\Images\zoompicture\UNIVERSE_ZOOM.png" />
     <Content Include="Content\kendo\2014.1.318\Black\editor.png" />
     <Content Include="Content\kendo\2014.1.318\Black\imagebrowser.png" />
     <Content Include="Content\kendo\2014.1.318\Black\indeterminate.gif" />

@@ -64,6 +64,8 @@ namespace Nop.Services.Media
             string storeLocation = null, 
             PictureType defaultPictureType = PictureType.Entity);
 
+        string GetZoomURL(int productId);
+
         /// <summary>
         /// Get a picture local path
         /// </summary>
