@@ -1,8 +1,8 @@
-﻿Group: Payment methods
-FriendlyName: Credit Card
+Group: Payment methods
+FriendlyName: Tarjeta de credito
 SystemName: Payments.Manual
 Version: 1.14
 SupportedVersions: 3.30
 Author: nopCommerce team
-DisplayOrder: 1
+DisplayOrder: 3
 FileName: Nop.Plugin.Payments.Manual.dll

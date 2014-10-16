@@ -1858,7 +1858,7 @@ namespace Nop.Web.Controllers
         public ActionResult StartCheckout(FormCollection form)
         {
 
-            return RedirectToRoute("HomePage");
+            //return RedirectToRoute("HomePage");
             
             var cart = _workContext.CurrentCustomer.ShoppingCartItems
                 .Where(sci => sci.ShoppingCartType == ShoppingCartType.ShoppingCart)

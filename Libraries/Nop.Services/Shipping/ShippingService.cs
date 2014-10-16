@@ -133,6 +133,7 @@ namespace Nop.Services.Shipping
             return LoadAllShippingRateComputationMethods(storeId)
                    .Where(provider => _shippingSettings.ActiveShippingRateComputationMethodSystemNames.Contains(provider.PluginDescriptor.SystemName, StringComparer.InvariantCultureIgnoreCase))
                    .ToList();
+            //return LoadAllShippingRateComputationMethods(storeId).ToList();
         }
 
         /// <summary>

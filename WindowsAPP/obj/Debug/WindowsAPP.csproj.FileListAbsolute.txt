@@ -1,0 +1,9 @@
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\WindowsAPP\bin\Debug\WindowsAPP.exe.config
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\WindowsAPP\bin\Debug\WindowsAPP.exe
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\WindowsAPP\bin\Debug\WindowsAPP.pdb
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\WindowsAPP\obj\Debug\WindowsAPP.csprojResolveAssemblyReference.cache
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\WindowsAPP\obj\Debug\WindowsAPP.Form1.resources
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\WindowsAPP\obj\Debug\WindowsAPP.Properties.Resources.resources
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\WindowsAPP\obj\Debug\WindowsAPP.csproj.GenerateResource.Cache
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\WindowsAPP\obj\Debug\WindowsAPP.exe
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\WindowsAPP\obj\Debug\WindowsAPP.pdb

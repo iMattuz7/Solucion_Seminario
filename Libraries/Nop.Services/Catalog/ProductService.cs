@@ -142,6 +142,10 @@ namespace Nop.Services.Catalog
             this._eventPublisher = eventPublisher;
         }
 
+        public ProductService()
+        {
+        }
+
         #endregion
         
         #region Methods

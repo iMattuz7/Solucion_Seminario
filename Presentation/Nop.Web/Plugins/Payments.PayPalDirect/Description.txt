@@ -1,5 +1,5 @@
-﻿Group: Payment methods
-FriendlyName: Credit Card
+Group: Payment methods
+FriendlyName: Tarjeta de credito
 SystemName: Payments.PayPalDirect
 Version: 1.20
 SupportedVersions: 3.30

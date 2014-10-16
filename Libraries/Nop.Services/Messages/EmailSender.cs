@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using Nop.Core.Domain.Messages;
+using System.Text;
 
 namespace Nop.Services.Messages
 {
@@ -92,14 +93,17 @@ namespace Nop.Services.Messages
 
             using (var smtpClient = new SmtpClient())
             {
-                smtpClient.UseDefaultCredentials = emailAccount.UseDefaultCredentials;
-                smtpClient.Host = emailAccount.Host;
-                smtpClient.Port = emailAccount.Port;
-                smtpClient.EnableSsl = emailAccount.EnableSsl;
-                if (emailAccount.UseDefaultCredentials)
-                    smtpClient.Credentials = CredentialCache.DefaultNetworkCredentials;
-                else
-                    smtpClient.Credentials = new NetworkCredential(emailAccount.Username, emailAccount.Password);
+                smtpClient.Port = 587;
+                smtpClient.Host = "smtp.gmail.com";
+                smtpClient.EnableSsl = true;
+                smtpClient.Timeout = 10000;
+                smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtpClient.UseDefaultCredentials = false;
+                smtpClient.Credentials = new System.Net.NetworkCredential("matias.almiron", "1307imattuz");
+
+                message.BodyEncoding = UTF8Encoding.UTF8;
+                message.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
+
                 smtpClient.Send(message);
             }
         }
