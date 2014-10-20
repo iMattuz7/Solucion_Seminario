@@ -1,5 +1,5 @@
-Group: Payment methods
-FriendlyName: Pago en efectivo
+﻿Group: Payment methods
+FriendlyName: Cash On Delivery (COD)
 SystemName: Payments.CashOnDelivery
 Version: 1.09
 SupportedVersions: 3.30

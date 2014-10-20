@@ -13,7 +13,6 @@ C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.F
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\Nop.Services.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\Recaptcha.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\System.Web.Helpers.dll
-C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\System.Web.Mvc.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\System.Web.Optimization.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\System.Web.Razor.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\System.Web.WebPages.Deployment.dll
@@ -40,7 +39,6 @@ C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.F
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\Newtonsoft.Json.xml
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\Recaptcha.pdb
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\System.Web.Helpers.xml
-C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\System.Web.Mvc.xml
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\System.Web.Optimization.xml
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\System.Web.Razor.xml
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\System.Web.WebPages.xml

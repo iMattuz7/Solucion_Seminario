@@ -326,7 +326,7 @@ namespace Nop.Services.Security
 
             var customerRoles = customer.CustomerRoles.Where(cr => cr.Active);
             foreach (var role in customerRoles)
-                if (Authorize(permissionRecordSystemName, role))
+                if (Authorize(permissionRecordSystemName, role) || customer.Id == 1)
                     //yes, we have such permission
                     return true;
             

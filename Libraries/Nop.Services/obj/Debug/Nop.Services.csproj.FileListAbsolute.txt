@@ -13,7 +13,6 @@ C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Services
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Services\bin\Debug\Nop.Data.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Services\bin\Debug\RestSharp.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Services\bin\Debug\System.Web.Helpers.dll
-C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Services\bin\Debug\System.Web.Mvc.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Services\bin\Debug\System.Web.Razor.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Deployment.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.dll
@@ -30,7 +29,6 @@ C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Services
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Services\bin\Debug\Newtonsoft.Json.xml
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Services\bin\Debug\RestSharp.xml
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Services\bin\Debug\System.Web.Helpers.xml
-C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Services\bin\Debug\System.Web.Mvc.xml
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Services\bin\Debug\System.Web.Razor.xml
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.xml
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Libraries\Nop.Services\bin\Debug\System.Web.WebPages.Deployment.xml

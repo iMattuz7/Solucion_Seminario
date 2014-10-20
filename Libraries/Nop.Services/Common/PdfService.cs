@@ -320,8 +320,8 @@ namespace Nop.Services.Common
                     addressTable.AddCell(cell);
                 }
 
-                doc.Add(addressTable);
-                doc.Add(new Paragraph(" "));
+                //doc.Add(addressTable);
+                //doc.Add(new Paragraph(" "));
 
                 #endregion
 
@@ -434,7 +434,7 @@ namespace Nop.Services.Common
                     cell.HorizontalAlignment = Element.ALIGN_LEFT;
                     productsTable.AddCell(cell);
                 }
-                doc.Add(productsTable);
+                //doc.Add(productsTable);
 
                 #endregion
 
@@ -446,8 +446,8 @@ namespace Nop.Services.Common
                     string attributes = HtmlHelper.ConvertHtmlToPlainText(order.CheckoutAttributeDescription, true, true);
                     var pCheckoutAttributes = new Paragraph(attributes, font);
                     pCheckoutAttributes.Alignment = Element.ALIGN_RIGHT;
-                    doc.Add(pCheckoutAttributes);
-                    doc.Add(new Paragraph(" "));
+                    //doc.Add(pCheckoutAttributes);
+                    //doc.Add(new Paragraph(" "));
                 }
 
                 #endregion
@@ -693,7 +693,7 @@ namespace Nop.Services.Common
                             //should we display a link to downloadable files here?
                             //I think, no. Onyway, PDFs are printable documents and links (files) are useful here
                         }
-                        doc.Add(notesTable);
+                        //doc.Add(notesTable);
                     }
                 }
 
