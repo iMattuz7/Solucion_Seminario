@@ -10,10 +10,10 @@
     var canManageProducts = permissionService.Authorize(StandardPermissionProvider.ManageProducts);
 }
 <div class="section-title">
-    <img src="@Url.Content("~/Administration/Content/images/ico-dashboard.png")" alt="" />
-    @T("Admin.Dashboard")
+    @*<img src="@Url.Content("~/Administration/Content/images/ico-dashboard.png")" alt="" />
+    @T("Admin.Dashboard")*@
 </div>
-<table class="dashboard">
+@*<table class="dashboard">
     @Html.Widget("admin_dashboard_top")
     <tr>
         <td class="maincol">
@@ -105,4 +105,4 @@
         }
     </tr>
     @Html.Widget("admin_dashboard_bottom")
-</table>
+</table>*@

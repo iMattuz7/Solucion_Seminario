@@ -60,7 +60,11 @@
 <ul id="admin-menu">
     @foreach (var item in siteMap.RootNode.ChildNodes.Where(x => x.Visible))
     {
-        @RenderMenuItem(item)
+        if (!item.Title.Equals("Dashboard") && !item.Title.Equals("Help") && !item.Title.Equals("Ayuda") && !item.Title.Equals("Sistema") && !item.Title.Equals("System"))
+          {
+            @RenderMenuItem(item)      
+          }   
+         
     }
 	@*plugin custom items*@
     @if (adminMenuPlugins.Any())

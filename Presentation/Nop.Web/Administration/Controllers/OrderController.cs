@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web.Mvc;
+using Microsoft.Ajax.Utilities;
 using Nop.Admin.Models.Orders;
 using Nop.Core;
 using Nop.Core.Domain.Catalog;
@@ -2255,8 +2256,9 @@ namespace Nop.Admin.Controllers
             //states
             model.AvailableStates.Add(new SelectListItem() { Text = "*", Value = "0" });
 
-            return View(model);
-		}
+            //return View(model);
+            return null;
+        }
 
 		[HttpPost]
         public ActionResult ShipmentListSelect(DataSourceRequest command, ShipmentListModel model)

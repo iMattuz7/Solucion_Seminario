@@ -99,7 +99,7 @@ namespace Nop.Services.Messages
                 smtpClient.Timeout = 10000;
                 smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtpClient.UseDefaultCredentials = false;
-                smtpClient.Credentials = new System.Net.NetworkCredential("matias.almiron", "1307imattuz");
+                smtpClient.Credentials = new System.Net.NetworkCredential("matiasalmirontfi", "uaitfi123");
 
                 message.BodyEncoding = UTF8Encoding.UTF8;
                 message.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
