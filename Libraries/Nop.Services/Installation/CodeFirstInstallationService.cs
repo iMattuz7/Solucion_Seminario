@@ -176,10 +176,10 @@ namespace Nop.Services.Installation
             {
                 new Store()
                 {
-                    Name = "Your store name",
+                    Name = "Slalom IT",
                     Url = storeUrl,
                     SslEnabled = false,
-                    Hosts = "yourstore.com,www.yourstore.com",
+                    Hosts = "matiastest.azurewebsites.net",
                     DisplayOrder = 1,
                 },
             };

@@ -12,6 +12,7 @@
     <description>Currently, this distribution provides an API for the GeoIP2 web services.</description>
     <releaseNotes>Initial release.</releaseNotes>
     <copyright>Copyright 2013</copyright>
+    <language />
     <tags>geolocation</tags>
     <dependencies>
       <dependency id="RestSharp" version="104.4.0" />

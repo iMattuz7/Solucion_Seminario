@@ -644,9 +644,9 @@ namespace Nop.Services.Media
             //hago un sql client para traer la ur
             var zoomURL = "";
             SqlConnection con =
-                new SqlConnection("Data Source=IMATTUZ-WIN;Initial Catalog=dbSlalomIT;Integrated Security=True");
+                new SqlConnection("Server=tcp:exn5ljzl9y.database.windows.net,1433;Database=matiastestdb;User ID=dbmatias@exn5ljzl9y;Password=Matias123;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;");
             StringBuilder sqlQuery = new StringBuilder();
-            sqlQuery.Append("SELECT [ZoomPictureURL] FROM [dbSlalomIT].[dbo].[PictureZoom2] ");
+            sqlQuery.Append("SELECT [ZoomPictureURL] FROM [matiastestdb].[dbo].[PictureZoom2] ");
             sqlQuery.AppendFormat("where PictureID = {0}", productId);
             var cmdSql = new SqlCommand(sqlQuery.ToString(), con);
             cmdSql.Connection.Open();

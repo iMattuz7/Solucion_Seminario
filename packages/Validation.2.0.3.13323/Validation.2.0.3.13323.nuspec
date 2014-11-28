@@ -16,6 +16,7 @@
 v2.0.2 corrects an error message and adds code snippets.
 v2.0.1 allows partially trusted callers.</releaseNotes>
     <copyright>Copyright © Andrew Arnott</copyright>
+    <language />
     <tags>InputValidation IntegrityCheck</tags>
   </metadata>
 </package>

@@ -1,3 +1,5 @@
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.ExternalAuth.OpenId\obj\Debug\Nop.Plugin.ExternalAuth.OpenId.csproj.App.config
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.ExternalAuth.OpenId\obj\Debug\Nop.Plugin.ExternalAuth.OpenId.csprojResolveAssemblyReference.cache
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\ExternalAuth.OpenId\Description.txt
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\ExternalAuth.OpenId\Content\Images\openid-selector\images.large\aol.gif
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\ExternalAuth.OpenId\Content\Images\openid-selector\images.large\facebook.gif
@@ -92,7 +94,5 @@ C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\P
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\ExternalAuth.OpenId\Nop.Plugin.ExternalAuth.OpenId.dll.config
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\ExternalAuth.OpenId\Nop.Plugin.ExternalAuth.OpenId.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\ExternalAuth.OpenId\Nop.Plugin.ExternalAuth.OpenId.pdb
-C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.ExternalAuth.OpenId\obj\Debug\Nop.Plugin.ExternalAuth.OpenId.csproj.App.config
-C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.ExternalAuth.OpenId\obj\Debug\Nop.Plugin.ExternalAuth.OpenId.csprojResolveAssemblyReference.cache
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.ExternalAuth.OpenId\obj\Debug\Nop.Plugin.ExternalAuth.OpenId.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.ExternalAuth.OpenId\obj\Debug\Nop.Plugin.ExternalAuth.OpenId.pdb

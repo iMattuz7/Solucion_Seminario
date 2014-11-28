@@ -1,3 +1,4 @@
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.csprojResolveAssemblyReference.cache
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\Misc.WebServices\Description.txt
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\Misc.WebServices\logo.jpg
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\NopService.svc
@@ -6,4 +7,3 @@ C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\P
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.pdb
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.pdb
-C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.csprojResolveAssemblyReference.cache

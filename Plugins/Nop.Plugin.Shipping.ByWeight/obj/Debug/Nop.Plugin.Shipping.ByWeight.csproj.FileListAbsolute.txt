@@ -1,7 +1,7 @@
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.csprojResolveAssemblyReference.cache
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Description.txt
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\Shipping.ByWeight\logo.jpg
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\Shipping.ByWeight\Nop.Plugin.Shipping.ByWeight.pdb
-C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.csprojResolveAssemblyReference.cache
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.Shipping.ByWeight\obj\Debug\Nop.Plugin.Shipping.ByWeight.pdb

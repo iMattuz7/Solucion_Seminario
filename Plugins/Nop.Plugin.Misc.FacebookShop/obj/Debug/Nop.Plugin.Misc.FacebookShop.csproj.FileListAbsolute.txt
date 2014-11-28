@@ -1,3 +1,4 @@
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.Misc.FacebookShop\obj\Debug\Nop.Plugin.Misc.FacebookShop.csprojResolveAssemblyReference.cache
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\Misc.FacebookShop\Description.txt
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\Misc.FacebookShop\Content\images\logo.gif
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\Misc.FacebookShop\Content\images\top-menu-background.png
@@ -10,6 +11,5 @@ C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\P
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\Misc.FacebookShop\Scripts\jquery-1.10.2.min.js
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\Misc.FacebookShop\Nop.Plugin.Misc.FacebookShop.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\Misc.FacebookShop\Nop.Plugin.Misc.FacebookShop.pdb
-C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.Misc.FacebookShop\obj\Debug\Nop.Plugin.Misc.FacebookShop.csprojResolveAssemblyReference.cache
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.Misc.FacebookShop\obj\Debug\Nop.Plugin.Misc.FacebookShop.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.Misc.FacebookShop\obj\Debug\Nop.Plugin.Misc.FacebookShop.pdb

@@ -1,0 +1,7 @@
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\Tax.FixedRate\Description.txt
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\Tax.FixedRate\logo.jpg
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\Tax.FixedRate\Nop.Plugin.Tax.FixedRate.dll
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Plugins\Tax.FixedRate\Nop.Plugin.Tax.FixedRate.pdb
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.Tax.FixedRate\obj\Release\Nop.Plugin.Tax.FixedRate.csprojResolveAssemblyReference.cache
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.Tax.FixedRate\obj\Release\Nop.Plugin.Tax.FixedRate.dll
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Plugins\Nop.Plugin.Tax.FixedRate\obj\Release\Nop.Plugin.Tax.FixedRate.pdb

@@ -12,6 +12,7 @@
     <description>.NET reader for the MaxMind DB file format</description>
     <releaseNotes>Initial release.</releaseNotes>
     <copyright>Copyright 2013</copyright>
+    <language />
     <tags>MaxMind GeoIP IP database geolocation</tags>
     <dependencies>
       <dependency id="Newtonsoft.Json" version="5.0.8" />

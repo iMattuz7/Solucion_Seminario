@@ -12,6 +12,8 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Allows SQL Server Compact 4.0 to be used with Entity Framework.</description>
     <summary>Allows SQL Server Compact 4.0 to be used with Entity Framework.</summary>
+    <releaseNotes />
+    <copyright />
     <language>en-US</language>
     <tags>Microsoft EF SQL Compact CE</tags>
     <dependencies>

@@ -1,3 +1,4 @@
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\obj\Debug\Nop.Web.Framework.csprojResolveAssemblyReference.cache
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\Nop.Web.Framework.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\Nop.Web.Framework.pdb
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\Antlr3.Runtime.dll
@@ -44,6 +45,7 @@ C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.F
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\System.Web.WebPages.xml
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\itextsharp.xml
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\MaxMind.GeoIP2.xml
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\MaxMind.Db.xml
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\EPPlus.xml
@@ -60,6 +62,5 @@ C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.F
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\ru\FluentValidation.resources.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\sv\FluentValidation.resources.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\bin\Debug\tr\FluentValidation.resources.dll
-C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\obj\Debug\Nop.Web.Framework.csprojResolveAssemblyReference.cache
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\obj\Debug\Nop.Web.Framework.dll
 C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web.Framework\obj\Debug\Nop.Web.Framework.pdb

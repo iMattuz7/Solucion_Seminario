@@ -707,6 +707,56 @@ namespace Nop.Web.Controllers
             return View(model);
         }
 
+
+        [NopHttpsRequirement(SslRequirement.No)]
+        public ActionResult LoginAPI(string username, string pass, string mail)
+        {
+           
+
+                if (_customerSettings.UsernamesEnabled && username != null)
+                {
+                    username = username.Trim();
+                }
+                var loginResult = _customerRegistrationService.ValidateCustomer(_customerSettings.UsernamesEnabled ? username : mail, pass);
+                switch (loginResult)
+                {
+                    case CustomerLoginResults.Successful:
+                        {
+                            var customer = _customerSettings.UsernamesEnabled ? _customerService.GetCustomerByUsername(username) : _customerService.GetCustomerByEmail(mail);
+
+                            //migrate shopping cart
+                            _shoppingCartService.MigrateShoppingCart(_workContext.CurrentCustomer, customer, true);
+
+                            //sign in new customer
+                            _authenticationService.SignIn(customer, true);
+
+                            //activity log
+                            _customerActivityService.InsertActivity("PublicStore.Login", _localizationService.GetResource("ActivityLog.PublicStore.Login"), customer);
+
+                           
+                            return RedirectToRoute("HomePage");
+                        }
+                    case CustomerLoginResults.CustomerNotExist:
+                        ModelState.AddModelError("", _localizationService.GetResource("Account.Login.WrongCredentials.CustomerNotExist"));
+                        break;
+                    case CustomerLoginResults.Deleted:
+                        ModelState.AddModelError("", _localizationService.GetResource("Account.Login.WrongCredentials.Deleted"));
+                        break;
+                    case CustomerLoginResults.NotActive:
+                        ModelState.AddModelError("", _localizationService.GetResource("Account.Login.WrongCredentials.NotActive"));
+                        break;
+                    case CustomerLoginResults.NotRegistered:
+                        ModelState.AddModelError("", _localizationService.GetResource("Account.Login.WrongCredentials.NotRegistered"));
+                        break;
+                    case CustomerLoginResults.WrongPassword:
+                    default:
+                        ModelState.AddModelError("", _localizationService.GetResource("Account.Login.WrongCredentials"));
+                        break;
+                }
+           
+            return null;
+        }
+
         [NopHttpsRequirement(SslRequirement.Yes)]
         public ActionResult Register()
         {
@@ -1030,7 +1080,8 @@ namespace Nop.Web.Controllers
                 _customerActivityService.InsertActivity("PublicStore.Logout", _localizationService.GetResource("ActivityLog.PublicStore.Logout"));
 
                 _authenticationService.SignOut();
-                return RedirectToRoute("HomePage");
+                //return RedirectToRoute("HomePage");
+                return RedirectToAction("Logout", "Home");
             }
 
         }

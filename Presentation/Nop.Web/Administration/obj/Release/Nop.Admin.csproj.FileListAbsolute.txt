@@ -1,0 +1,5 @@
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\bin\Nop.Admin.dll
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\bin\Nop.Admin.pdb
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Administration\obj\Release\Nop.Admin.csprojResolveAssemblyReference.cache
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Administration\obj\Release\Nop.Admin.dll
+C:\Users\matt\Desktop\Tesis ingenieria\Solucion_Seminario\Presentation\Nop.Web\Administration\obj\Release\Nop.Admin.pdb

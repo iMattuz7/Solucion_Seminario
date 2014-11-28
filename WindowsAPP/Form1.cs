@@ -9,6 +9,7 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Nop.Web.Controllers;
 
 namespace WindowsAPP
 {
@@ -47,6 +48,12 @@ namespace WindowsAPP
             //_productService = new ProductService();
             //var products = _productService.GetAllProductsDisplayedOnHomePage();
             //listView1.da
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CatalogController controller = new CatalogController();
+            controller.Category(1, null);
         }
     }
 }
